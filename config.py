@@ -1,0 +1,3 @@
+# Board
+BOARD_WIDTH = 20
+BOARD_LENGTH = 20
