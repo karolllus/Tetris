@@ -1,38 +1,36 @@
 import numpy as np
 
+
 class Piece:
 
-    def __init__(self, shape):
+    def __init__(self, shape, position):
         self.shape = shape
-        # self.position = position
-    
+        self.shape_old = self.shape
+        self.position = shape[1]
+        self.position_old = self.position
+        
 
     def rotate_clockwise(self):
-        self.shape = np.rot90(self.shape)
+        self.shape_old = self.shape
+        self.shape = np.rot90(self.shape, -45)
 
 
-    def rotate_counter(self):
-        pass
+    def rotate_counter_clockwise(self):
+        self.shape_old = self.shape
+        self.shape = np.rot90(self.shape, 45)
 
 
     def move_left(self):
-        pass
+        self.position_old = self.position
+        self.position[0] -= 1
+        self.position[1] += 1
 
 
     def move_right(self):
-        pass
+        self.position_old = self.position
+        self.position[0] += 1
+        self.position[1] += 1
+
 
     def show_shape(self):
         print(self.shape)
-
-
-shape = np.array([  [1, 1, 1, 1],
-                    [0, 0, 0, 0],
-                    [0, 0, 0, 0],
-                    [0, 0, 0, 0]])
-shape = np.rot90(shape)
-
-# print(''.join([''.join(item) for item in shape.astype(str)]).replace('1','*').replace('0',' '), sep='\n')
-
-# block = Piece(shapeA)
-# block.show_shape()
