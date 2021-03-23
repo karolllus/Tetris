@@ -5,7 +5,7 @@ a - move piece left
 d - move piece right
 w - rotate piece counter clockwise
 s - rotate piece clockwise
-  *                  *
+  <!-- *                  *
   *                  *
   *                  *
   *                  *
@@ -24,7 +24,7 @@ s - rotate piece clockwise
   *                  *
   *      **          *
   *       **         *
-  ********************
+  ******************** -->
 
 
 Please make a move:
