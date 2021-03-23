@@ -31,7 +31,7 @@ def game():
     while 1:
         if board.has_moves(piece) == False:
             board.update(piece)
-            piece == None
+            piece = None
 
         # check if game is piece is spawned
         if piece == None:

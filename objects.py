@@ -54,11 +54,21 @@ class Board:
 
 
     def initialize(self):
+        sy, sx = self.shape[0], self.shape[1]
+        uber_outer = np.zeros((sy+2, sx+4), dtype=int)
         outer = np.ones(self.shape, dtype=int)
-        inner = np.zeros((self.shape[0]-1, self.shape[1]-2), dtype=int)
+        inner = np.zeros((sy-1, sx-2), dtype=int)
         x, y = 0, 1
         outer[x:x+inner.shape[0], y:y+inner.shape[1]] = inner
-        self.board = outer
+        x, y = 0, 2
+        uber_outer[x:x+outer.shape[0], y:y+outer.shape[1]] = outer
+        self.board = uber_outer
+
+        # outer = np.ones(self.shape, dtype=int)
+        # inner = np.zeros((self.shape[0]-1, self.shape[1]-2), dtype=int)
+        # x, y = 0, 1
+        # outer[x:x+inner.shape[0], y:y+inner.shape[1]] = inner
+        # self.board = outer
 
 
     def update(self, piece):
