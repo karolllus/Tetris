@@ -1,9 +1,12 @@
-import numpy as np
+# Configuration file
 
 
-# Board
+# Board parameters
 BOARD_SHAPE = (20, 20)
 
+
+# Game shapes
+# To add more shapes SHAPES dictionary needs to include array of the shape and the dictionary key needs to be included in the SHAPES_LIST
 
 SHAPES_LIST = ['I', 'L', 'J', 'S', 'O']
 SHAPES = {
