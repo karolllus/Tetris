@@ -1,5 +1,7 @@
 # Configuration file
 
+import numpy as np
+
 
 # Board parameters
 BOARD_SHAPE = (20, 20)
